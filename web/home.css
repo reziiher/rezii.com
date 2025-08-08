@@ -1,0 +1,175 @@
+/* Minecraft green theme */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #1a472a;
+}
+
+nav {
+    background: #215732;
+    padding: 1em 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 2em;
+}
+
+nav ul li a {
+    color: #d7fc70;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #fff700;
+}
+
+.hero {
+    text-align: center;
+    padding: 2em 1em 1em 1em;
+    background: #388d3c;
+    color: #fff;
+}
+
+.search-bar {
+    margin-top: 1em;
+    padding: 0.7em 1em;
+    width: 300px;
+    max-width: 90vw;
+    border-radius: 8px;
+    border: 1px solid #6bbf59;
+    font-size: 1em;
+    background: #eaffd0;
+    color: #215732;
+}
+
+.mod-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5em;
+    padding: 2em 1em;
+}
+
+.mod-card {
+    background: #eaffd0;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(34,34,59,0.08);
+    padding: 1.5em;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s;
+    border: 2px solid #388d3c;
+    position: relative;
+}
+
+.mod-card:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.mod-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    border: 2px solid #388d3c;
+}
+
+.mod-card h2 {
+    margin: 0.5em 0 0.3em 0;
+    color: #215732;
+}
+
+.mod-card p {
+    color: #388d3c;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+/* Remove default button color, only set shared button styles */
+.mod-card a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 2px 8px rgba(34, 71, 42, 0.12);
+}
+
+/* Gold "View Details" button for home page */
+body.home-page .mod-card a {
+    background: linear-gradient(90deg, #ffd700 60%, #fff700 100%);
+    color: #215732;
+    border-color: #bfa100;
+    box-shadow: 0 2px 8px rgba(218, 165, 32, 0.12);
+}
+
+body.home-page .mod-card a:hover {
+    background: #fff700;
+    color: #388d3c;
+}
+
+/* Green "View Details" button for mods page */
+body.mods-page .mod-card a {
+    background: linear-gradient(90deg, #388d3c 60%, #6bbf59 100%);
+    color: #fff;
+    border-color: #215732;
+}
+
+body.mods-page .mod-card a:hover {
+    background: #215732;
+    color: #d7fc70;
+}
+
+/* Top mod highlight */
+.mod-card.top-mod {
+    border: 3px solid gold;
+    box-shadow: 0 4px 24px rgba(218, 165, 32, 0.15);
+    background: linear-gradient(135deg, #fffbe6 60%, #fffde4 100%);
+}
+
+.mod-card.top-mod::before {
+    content: "Top Mod";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: gold;
+    color: #215732;
+    font-weight: bold;
+    padding: 0.2em 0.7em;
+    border-radius: 6px;
+    font-size: 0.9em;
+    box-shadow: 0 2px 8px rgba(218, 165, 32, 0.12);
+}
+
+@media (max-width: 700px) {
+    .mod-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2em;
+    }
+    .mod-card {
+        width: 90vw;
+    }
+    .hero .search-bar {
+        width: 95vw;
+        font-size: 1em;
+    }
+}

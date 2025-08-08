@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft Mods - Minecraft Mods Hub</title>
+    <link rel="stylesheet" href="home.css">
+    <script defer>
+    // Simple search filter for mods
+    document.addEventListener('DOMContentLoaded', function() {
+        const search = document.querySelector('.search-bar');
+        const cards = document.querySelectorAll('.mod-card');
+        search.addEventListener('input', function() {
+            const val = search.value.toLowerCase();
+            cards.forEach(card => {
+                const title = card.querySelector('h2').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                card.style.display = (title.includes(val) || desc.includes(val)) ? '' : 'none';
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="mods.html">Mods</a></li>
+            <li><a href="resourcepacks.html">Resource Packs</a></li>
+            <li><a href="datapacks.html">Datapacks</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <h1>All Minecraft Mods</h1>
+        <input type="text" placeholder="Search mods..." class="search-bar">
+    </header>
+    <main>
+        <section class="mod-list">
+            <article class="mod-card top-mod">
+                <img src="https://via.placeholder.com/120" alt="Mod Icon">
+                <h2>Example Mod</h2>
+                <p>A cool Minecraft mod that adds new features.</p>
+                <a href="#">View Details</a>
+            </article>
+            <article class="mod-card">
+                <img src="https://via.placeholder.com/120" alt="Mod Icon">
+                <h2>Another Mod</h2>
+                <p>Enhance your Minecraft experience with this mod.</p>
+                <a href="#">View Details</a>
+            </article>
+            <article class="mod-card">
+                <img src="https://via.placeholder.com/120" alt="Mod Icon">
+                <h2>Adventure Plus</h2>
+                <p>New biomes, mobs, and adventures await!</p>
+                <a href="#">View Details</a>
+            </article>
+            <article class="mod-card">
+                <img src="https://via.placeholder.com/120" alt="Mod Icon">
+                <h2>Redstone Expansion</h2>
+                <p>Take your redstone builds to the next level.</p>
+                <a href="#">View Details</a>
+            </article>
+            <article class="mod-card">
+                <img src="https://via.placeholder.com/120" alt="Mod Icon">
+                <h2>MagicCraft</h2>
+                <p>Adds magic spells and wands to Minecraft.</p>
+                <a href="#">View Details</a>
+            </article>
+            <!-- Add more mod cards as needed -->
+        </section>
+    </main>
+</body>
+</html>
